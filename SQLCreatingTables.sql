@@ -25,7 +25,7 @@ INSERT INTO employees (id, name, date_of_birth, salary, position)
 
 --- Using ALTER statement to modify the customers table and add an email column
 
-ALTER TABLE Customers
+ALTER TABLE employees
 ADD Email varchar(255);
 
 --- Using UPDATE statement to add a email to the newly created email column
@@ -37,7 +37,7 @@ WHERE id = 0141;
 
 --- Using CONSTRAINT check function only allow certain values for the specified column
 
-ALTER TABLE Persons
+ALTER TABLE employees
 ADD CONSTRAINT check_position CHECK (salary>='None');
 
 
@@ -45,3 +45,5 @@ ADD CONSTRAINT check_position CHECK (salary>='None');
 
  DELETE FROM employees
  WHERE Email IS NULL;
+ 
+ 
